@@ -1,0 +1,38 @@
+.content-page video {
+  width: 100%;
+}
+.content-page .content-info {
+  padding: 20rpx 50rpx;
+  margin-top: 30rpx;
+}
+
+.content-page .content-info .title {
+  display: block;
+  font-size:45rpx;
+  line-height:2;
+}
+
+.content-page .content-info .desc {
+  color:#666;
+  font-size:34rpx;
+  display:block;
+  line-height:2;
+  min-height: 100rpx;
+}
+
+.content-page .content-info .date {
+  margin-top:20rpx;
+  display:block;
+  font-size:30rpx;
+  color:#999999;
+}
+
+.content-page .recommend-content {
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  margin: 10rpx 50rpx;
+  padding: 10rpx 0;
+}
+
+.content-page .recommend-content .recommend-title {
+  display: block;
+}

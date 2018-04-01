@@ -1,0 +1,18 @@
+<view class="video-content">
+  <video controls src="{{ item.video_src }}" poster="{{ item.image }}">
+    <!--<cover-view class="controls">
+      <cover-image class="cover-image" src="{{ item.image }}"/>
+    </cover-view>-->
+  </video>
+
+  <view class="content-info">
+    <view class="item-title">
+      <text class="item-title-p" bindtap="goContentView">{{ item.title }}</text>
+      <button class="video_share" open-type="share" plain="true">
+        <text class="iconfont icon-share" />
+      </button>
+    </view>
+    <text class="item-content" bindtap="goContentView">{{ item.content }}</text>
+    <text class="item-create">{{ item.created }}</text>
+  </view>
+</view>

@@ -1,0 +1,7 @@
+<view class="content-page">
+  <video-content item="{{ itemData }}"/>
+
+  <view class="recommend-content">
+    <p class="recommend-title">推荐视频</p>
+  </view>
+</view>
