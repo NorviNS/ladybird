@@ -12,7 +12,9 @@ Page({
       title: "测试分享按钮",
       content: "测试分享按钮",
       create: "2018-04-01",
-      video_src: "http://pic.ibaotu.com/00/54/74/51e888piCSyv.mp4",
+      // video_src: "http://pic.ibaotu.com/00/54/74/51e888piCSyv.mp4",
+      // video_src: "http://img1.stackcloud.org//WeChatSight216.mp4",
+      video_src: "http://img1.stackcloud.org/test_0001_.mp4",
       image: "http://img1.stackcloud.org//8de23cd1-b8a3-4d36-bd63-85f313186d35.jpg"
     }],
     currentPage: 1

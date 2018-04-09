@@ -37,7 +37,8 @@
 
 /**视频展示样式**/
 .video-content video{
-  width: 100%;
+  width: 750rpx;
+  height: 421.8rpx;
 }
 
 /**分享icon**/
@@ -61,7 +62,7 @@
 
 .iconfont {
   font-family:"iconfont" !important;
-  font-size:16px;
+  font-size:20px;
   font-style:normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
