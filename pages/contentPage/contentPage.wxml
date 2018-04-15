@@ -2,6 +2,17 @@
   <video-content item="{{ itemData }}"/>
 
   <view class="recommend-content">
-    <p class="recommend-title">推荐视频</p>
+    <p style="display: block">推荐视频</p>
+
+    <scroll-view scroll-x style="width: 100%" scroll-with-animation="true" class="recommend-scroll-box">
+      <view class="recommend-video" wx:for="{{recommendData}}" wx:key="{{ index }}">
+        <video controls src="{{ item.video_src }}" poster="{{ item.image }}">
+          <!--<cover-view class="controls">
+            <cover-image class="cover-image" src="{{ item.image }}"/>
+          </cover-view>-->
+        </video>
+        <p class="recommend-title">{{ item.title }}</p>
+      </view>
+    </scroll-view>
   </view>
 </view>

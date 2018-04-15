@@ -19,13 +19,18 @@
 .video-content .item-content {
   color:#666;
   font-size:34rpx;
-  display:block;
   line-height:2;
   min-height: 100rpx;
   pointer: cursor;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2; 
 }
 .video-content .item-create {
-  margin-top:20rpx;
+  margin-top:30rpx;
   display:block;
   font-size:30rpx;
   color:#999999;

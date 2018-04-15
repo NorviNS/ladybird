@@ -1,12 +1,30 @@
 const util = require('../../utils/util.js');
 Page({
+  data: {
+    itemData: {},
+    recommendData: []
+  },
   onLoad: function(options) {
-    this.getContentInfo();
+    this.getContentInfo(options.id);
+  },
+  requestByUrl: function(url, data) {
+    return new Promise((resolve, reject) => {
+      util.request(url, data, res => {
+        resolve(res.value);
+      });
+    });
   },
   getContentInfo: function(id) {
-    util.request('api/social/video/search.shtml', {currentPage: 1}, res => {
-      this.setData({itemData: res.value[0] });
-      wx.setNavigationBarTitle({  title: res.value[0].title });
+    Promise.all(
+      [this.requestByUrl('api/social/video/detail.shtml', { videoId: id }), 
+      this.requestByUrl('api/social/video/recommend.shtml', { videoId: id })])
+    .then(datas => {
+      console.log(datas);
+      this.setData({
+        itemData: datas[0],
+        recommendData: datas[1]
+      });
+      wx.setNavigationBarTitle({  title: datas[0].title });
     });
   },
   onShareAppMessage: function( options ) {

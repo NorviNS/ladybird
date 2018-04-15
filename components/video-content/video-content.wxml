@@ -1,5 +1,5 @@
 <view class="video-content">
-  <video controls src="{{ item.video_src }}" poster="{{ item.image }}">
+  <video id="index_{{ indexId }}" controls src="{{ item.video_src }}" poster="{{ item.image }}" bindplay="bindPlay">
     <!--<cover-view class="controls">
       <cover-image class="cover-image" src="{{ item.image }}"/>
     </cover-view>-->

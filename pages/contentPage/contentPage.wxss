@@ -33,6 +33,22 @@
   padding: 10rpx 0;
 }
 
+.content-page .recommend-content .recommend-scroll-box {
+  white-space: nowrap;
+  margin-top: 10rpx;
+}
+
 .content-page .recommend-content .recommend-title {
   display: block;
+  font-size: 25rpx;
+}
+
+.content-page .recommend-content .recommend-video {
+  width:250rpx;
+  height:144rpx;
+  margin-right: 10rpx;
+  display: inline-block;
+}
+.content-page .recommend-content .recommend-video video {
+  height: 100%;
 }

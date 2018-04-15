@@ -6,15 +6,34 @@ Component({
     },
     item: {
       type: Object
+    },
+    indexId: {
+      type: Number
+    },
+    videoLengh: {
+      type: Number
     }
   },
   methods: {
     goContentView: function() {
       if(this.properties.needNavigate) {
+        console.log(this.properties.item);
         wx.navigateTo({
-          url: '../contentPage/contentPage?id=1'
+          url: `../contentPage/contentPage?id=1`
         })
       };
+    },
+    bindPlay: function(e) {
+      var videoContext = wx.createVideoContext(`index_${this.properties.indexId}`),
+          videoContextPrev, videoContextNext;
+      if(this.properties.indexId > 0) {
+        videoContextPrev = wx.createVideoContext(`index_${this.properties.indexId-1}`);
+        videoContextPrev.seek(0);
+        videoContextPrev.pause();
+      }
+      if(this.properties.indexId < (this.properties.videoLengh - 1)) {
+        videoContextNext = wx.createVideoContext(`index_${this.properties.indexId+1}`);
+      }
     }
   },
   onShareAppMessage: function( options ) {

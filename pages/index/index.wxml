@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <scroll-view class="container" scroll-y="true">
   <view wx:for="{{video_data}}" wx:key="{{ index }}" class="video_content">
-    <video-content item="{{ item }}" needNavigate="true"/>
+    <video-content item="{{ item }}" indexId="{{ index }}" videoLengh="{{ video_data.length }}" needNavigate="true"/>
   </view>
 </scroll-view>
