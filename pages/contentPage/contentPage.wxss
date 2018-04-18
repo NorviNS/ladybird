@@ -49,6 +49,7 @@
   margin-right: 10rpx;
   display: inline-block;
 }
-.content-page .recommend-content .recommend-video video {
+.content-page .recommend-content .recommend-video image {
+  width: 100%;
   height: 100%;
 }

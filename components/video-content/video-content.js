@@ -7,9 +7,6 @@ Component({
     item: {
       type: Object
     },
-    indexId: {
-      type: Number
-    },
     videoLengh: {
       type: Number
     }
@@ -17,9 +14,8 @@ Component({
   methods: {
     goContentView: function() {
       if(this.properties.needNavigate) {
-        console.log(this.properties.item);
         wx.navigateTo({
-          url: `../contentPage/contentPage?id=1`
+          url: `../contentPage/contentPage?id=${this.properties.item && this.properties.item.id}`
         })
       };
     },
@@ -29,7 +25,7 @@ Component({
     }
   },
   ready: function(e) {
-    this.videoContext = wx.createVideoContext(`index_${this.properties.indexId}`);
+    this.videoContext = wx.createVideoContext(`index_${this.properties.item && this.properties.item.id}`);
   },
   onShareAppMessage: function( options ) {
     var shareObj = {
