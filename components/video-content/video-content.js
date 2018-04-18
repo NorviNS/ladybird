@@ -23,18 +23,13 @@ Component({
         })
       };
     },
-    bindPlay: function(e) {
-      var videoContext = wx.createVideoContext(`index_${this.properties.indexId}`),
-          videoContextPrev, videoContextNext;
-      if(this.properties.indexId > 0) {
-        videoContextPrev = wx.createVideoContext(`index_${this.properties.indexId-1}`);
-        videoContextPrev.seek(0);
-        videoContextPrev.pause();
-      }
-      if(this.properties.indexId < (this.properties.videoLengh - 1)) {
-        videoContextNext = wx.createVideoContext(`index_${this.properties.indexId+1}`);
-      }
+    bindVideoPlay: function(e) {
+      console.log(this.videoContext);
+      this.videoContext.play();
     }
+  },
+  ready: function(e) {
+    this.videoContext = wx.createVideoContext(`index_${this.properties.indexId}`);
   },
   onShareAppMessage: function( options ) {
     var shareObj = {
