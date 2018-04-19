@@ -1,6 +1,10 @@
 <!--index.wxml-->
 <view class="container">
-  <view wx:for="{{video_data}}" wx:key="{{ index }}" class="video_content">
-    <video-content item="{{ item }}" indexId="{{ index }}" videoLengh="{{ video_data.length }}" needNavigate="true"/>
-  </view>
+  <video-content item="{{ item }}"
+    indexId="{{ index }}"
+    needNavigate="true"
+    videoLengh="{{ video_data.length }}"
+    wx:for="{{video_data}}"
+    wx:key="{{ index }}"
+    class="video_content"/>
 </view>

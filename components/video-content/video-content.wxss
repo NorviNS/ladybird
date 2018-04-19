@@ -1,13 +1,14 @@
 /**文字样式**/
 .video-content .content-info {
-  padding: 20rpx 50rpx;
+  padding: 441.8rpx 50rpx 20rpx 50rpx;
   margin-bottom: 20rpx;
+  width: 650rpx;
 }
 .video-content .item-title {
   display: block;
   font-size:45rpx;
   line-height:2;
-  pointer: cursor;
+  cursor: pointer;
 }
 .video-content .item-title .item-title-p {
   display: inline-block;
@@ -21,7 +22,7 @@
   font-size:34rpx;
   line-height:2;
   min-height: 100rpx;
-  pointer: cursor;
+  cursor: pointer;
   display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -37,13 +38,16 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  pointer: normal;
+  cursor: pointer;
 }
 
 /**视频展示样式**/
 .video-content video{
   width: 750rpx;
   height: 421.8rpx;
+  z-index: 9999;
+  position: absolute;
+  left: 0;
 }
 
 /**分享icon**/
