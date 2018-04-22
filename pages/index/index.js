@@ -9,10 +9,11 @@ Page({
   },
   data: {
     video_data: [],
-    currentPage: 1
+    currentPage: 1,
+    appId: 1001
   },
   getNextVideoList: function(page) {
-    util.request('api/social/video/search.shtml', {currentPage: page}, res => {
+    util.request('api/social/video/search.shtml', {currentPage: page, appId: this.data.appId}, res => {
       this.setData({ video_data: this.data.video_data.concat(res.value), currentPage: ++page });
     });
   },

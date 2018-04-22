@@ -20,12 +20,16 @@ Component({
       };
     },
     bindVideoPlay: function(e) {
-      console.log(this.videoContext);
-      this.videoContext.play();
+      if(this.videoContext) {
+        console.log(this.videoContext);
+        this.videoContext.play();
+      }
     }
   },
   ready: function(e) {
-    this.videoContext = wx.createVideoContext(`index_${this.properties.item && this.properties.item.id}`);
+    if(this.properties.item && this.properties.item.type !== 1) {
+      this.videoContext = wx.createVideoContext(`index_${this.properties.item && this.properties.item.id}`);
+    }
   },
   onShareAppMessage: function( options ) {
     var shareObj = {

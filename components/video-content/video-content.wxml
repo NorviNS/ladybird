@@ -1,5 +1,8 @@
 <view class="video-content">
-  <video id="index_{{ indexId }}" controls src="{{ item.video_src }}" bindplay="bindVideoPlay" />
+  <video wx:if="{{ item.type !== 1 }}" id="index_{{ indexId }}" poster="{{ item.image }}" controls src="{{ item.video_src }}" bindplay="bindVideoPlay" />
+  <view wx:else class="video-poster">
+    <image src="{{ item.image }}" mode="widthFix"/>
+  </view>
 
   <view class="content-info">
     <view class="item-title">
